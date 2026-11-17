@@ -13,9 +13,9 @@
 
 ## Screenshots
 
-| Main App UI | Quick Settings Panel | Quick Settings Tile |
-| :---: | :---: | :---: |
-| <img src="docs/media/screenshot-main.jpg" width="240" alt="Main App UI" /> | <img src="docs/media/screenshot-qs-panel.jpg" width="240" alt="Quick Settings Panel" /> | <img src="docs/media/screenshot-qs-tile.jpg" width="180" alt="Quick Settings Tile" /> |
+| Main App UI | Quick Settings Tile |
+| :---: | :---: |
+| <img src="docs/media/screenshot-main.jpg" width="240" alt="Main App UI" /> | <img src="docs/media/screenshot-qs-tile.jpg" width="180" alt="Quick Settings Tile" /> |
 
 ---
 
