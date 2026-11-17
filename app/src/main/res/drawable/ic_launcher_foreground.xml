@@ -1,0 +1,75 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Translucent Liquid Glass lens disc (stays inside 66dp adaptive safe zone, transparent outside) -->
+    <path android:pathData="M54,23 A31,31 0 1,1 53.99,23 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="30"
+                android:startY="24"
+                android:endX="78"
+                android:endY="84">
+                <item android:offset="0.0" android:color="#4D7DD3FC" />
+                <item android:offset="0.5" android:color="#330A84FF" />
+                <item android:offset="1.0" android:color="#261E1B4B" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Specular glass rim highlight -->
+    <path
+        android:pathData="M54,23.8 A30.2,30.2 0 1,1 53.99,23.8 Z"
+        android:strokeWidth="1.4"
+        android:fillColor="@android:color/transparent">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:type="linear"
+                android:startX="32"
+                android:startY="24"
+                android:endX="76"
+                android:endY="84">
+                <item android:offset="0.0" android:color="#CCFFFFFF" />
+                <item android:offset="0.45" android:color="#33BAE6FD" />
+                <item android:offset="1.0" android:color="#66FFFFFF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- 8 tapered sun rays around the dimmer core -->
+    <group android:pivotX="54" android:pivotY="54" android:rotation="0">
+        <path android:fillColor="#E6FFFFFF" android:pathData="M52.5,29.8 a1.5,1.5 0 0,1 3,0 v4.4 a1.5,1.5 0 0,1 -3,0 z" />
+        <path android:fillColor="#B3BAE6FD" android:pathData="M52.5,73.8 a1.5,1.5 0 0,1 3,0 v4.4 a1.5,1.5 0 0,1 -3,0 z" />
+    </group>
+    <group android:pivotX="54" android:pivotY="54" android:rotation="45">
+        <path android:fillColor="#D9FFFFFF" android:pathData="M52.5,29.8 a1.5,1.5 0 0,1 3,0 v4.4 a1.5,1.5 0 0,1 -3,0 z" />
+        <path android:fillColor="#B3BAE6FD" android:pathData="M52.5,73.8 a1.5,1.5 0 0,1 3,0 v4.4 a1.5,1.5 0 0,1 -3,0 z" />
+    </group>
+    <group android:pivotX="54" android:pivotY="54" android:rotation="90">
+        <path android:fillColor="#B3BAE6FD" android:pathData="M52.5,29.8 a1.5,1.5 0 0,1 3,0 v4.4 a1.5,1.5 0 0,1 -3,0 z" />
+        <path android:fillColor="#E6FFFFFF" android:pathData="M52.5,73.8 a1.5,1.5 0 0,1 3,0 v4.4 a1.5,1.5 0 0,1 -3,0 z" />
+    </group>
+    <group android:pivotX="54" android:pivotY="54" android:rotation="135">
+        <path android:fillColor="#B3BAE6FD" android:pathData="M52.5,29.8 a1.5,1.5 0 0,1 3,0 v4.4 a1.5,1.5 0 0,1 -3,0 z" />
+        <path android:fillColor="#D9FFFFFF" android:pathData="M52.5,73.8 a1.5,1.5 0 0,1 3,0 v4.4 a1.5,1.5 0 0,1 -3,0 z" />
+    </group>
+
+    <!-- Hollow white-point ring -->
+    <path
+        android:pathData="M54,41.5 A12.5,12.5 0 1,1 53.99,41.5 Z"
+        android:strokeWidth="2.4"
+        android:strokeColor="#F2FFFFFF"
+        android:fillColor="@android:color/transparent" />
+
+    <!-- Left half bright / right half dimmed core (White Point contrast symbol) -->
+    <path
+        android:fillColor="#EBFFFFFF"
+        android:pathData="M54,44.5 A9.5,9.5 0 0,0 54,63.5 Z" />
+    <path
+        android:fillColor="#4D38BDF8"
+        android:pathData="M54,44.5 A9.5,9.5 0 0,1 54,63.5 Z" />
+</vector>

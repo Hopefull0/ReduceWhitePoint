@@ -1,0 +1,18 @@
+<resources>
+    <style name="Theme.ReduceWhitePoint" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#0A84FF</item>
+        <item name="colorPrimaryVariant">#0A84FF</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">#050711</item>
+    </style>
+
+    <style name="Theme.ReduceWhitePoint.ShortcutTrampoline" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

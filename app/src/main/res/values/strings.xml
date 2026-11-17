@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Reduce White Point</string>
+    <string name="tile_label">White Point</string>
+    <string name="tile_off">Off</string>
+    <string name="tile_setup">Setup needed</string>
+
+    <string name="subtitle">Display Accommodations</string>
+    <string name="status_on">Active • Reducing bright colors</string>
+    <string name="status_off">Inactive</string>
+    <string name="intensity">Intensity</string>
+    <string name="percent">%1$d%%</string>
+    <string name="footer">Reduce White Point lowers the intensity of bright colors. Toggle it anytime from the White Point tile in Quick Settings. Long-press the tile to open this screen.</string>
+
+    <string name="setup_title">One-time setup</string>
+    <string name="setup_body">1. Developer options → turn on \"Disable permission monitoring\".\n2. Connect USB and run this command on your PC:</string>
+    <string name="copy_command">Copy command</string>
+    <string name="copied">Copied to clipboard</string>
+    <string name="permission_missing">WRITE_SECURE_SETTINGS permission not granted yet</string>
+
+    <string name="widget_description">1-tap Reduce White Point toggle and quick preset controls.</string>
+
+    <string name="shortcut_toggle_short">Toggle Dimmer</string>
+    <string name="shortcut_toggle_long">Toggle Reduce White Point</string>
+    <string name="shortcut_reading_short">Reading</string>
+    <string name="shortcut_reading_long">Apply Reading preset (30%)</string>
+    <string name="shortcut_night_short">Night</string>
+    <string name="shortcut_night_long">Apply Night preset (65%)</string>
+    <string name="shortcut_ultra_short">Ultra Dim</string>
+    <string name="shortcut_ultra_long">Apply Ultra Dim preset (85%)</string>
+</resources>

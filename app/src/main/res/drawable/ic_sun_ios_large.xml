@@ -1,0 +1,72 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="36dp"
+    android:height="36dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Center solid white circle: diameter 46, radius 23 -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M50,50m-23,0a23,23 0,1 1,46 0a23,23 0,1 1,-46 0" />
+
+    <!-- 0 degrees (Top & Bottom rays spanning to boundary 0 and 100) -->
+    <group
+        android:pivotX="50"
+        android:pivotY="50"
+        android:rotation="0">
+        <!-- Top ray: from y=0 to y=16 (length 16, width 7.6) -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M46.2,3.8 a3.8,3.8 0 0,1 7.6,0 v8.4 a3.8,3.8 0 0,1 -7.6,0 z" />
+        <!-- Bottom ray: from y=84 to y=100 -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M46.2,87.8 a3.8,3.8 0 0,1 7.6,0 v8.4 a3.8,3.8 0 0,1 -7.6,0 z" />
+    </group>
+
+    <!-- 45 degrees diagonal -->
+    <group
+        android:pivotX="50"
+        android:pivotY="50"
+        android:rotation="45">
+        <!-- Top ray -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M46.2,3.8 a3.8,3.8 0 0,1 7.6,0 v8.4 a3.8,3.8 0 0,1 -7.6,0 z" />
+        <!-- Bottom ray -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M46.2,87.8 a3.8,3.8 0 0,1 7.6,0 v8.4 a3.8,3.8 0 0,1 -7.6,0 z" />
+    </group>
+
+    <!-- 90 degrees (Left & Right rays) -->
+    <group
+        android:pivotX="50"
+        android:pivotY="50"
+        android:rotation="90">
+        <!-- Top ray -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M46.2,3.8 a3.8,3.8 0 0,1 7.6,0 v8.4 a3.8,3.8 0 0,1 -7.6,0 z" />
+        <!-- Bottom ray -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M46.2,87.8 a3.8,3.8 0 0,1 7.6,0 v8.4 a3.8,3.8 0 0,1 -7.6,0 z" />
+    </group>
+
+    <!-- 135 degrees diagonal -->
+    <group
+        android:pivotX="50"
+        android:pivotY="50"
+        android:rotation="135">
+        <!-- Top ray -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M46.2,3.8 a3.8,3.8 0 0,1 7.6,0 v8.4 a3.8,3.8 0 0,1 -7.6,0 z" />
+        <!-- Bottom ray -->
+        <path
+            android:fillColor="#FFFFFFFF"
+            android:pathData="M46.2,87.8 a3.8,3.8 0 0,1 7.6,0 v8.4 a3.8,3.8 0 0,1 -7.6,0 z" />
+    </group>
+
+</vector>

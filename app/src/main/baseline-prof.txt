@@ -1,0 +1,42 @@
+# ART Baseline Profile for ReduceWhitePoint (Cold Startup, Liquid Glass UI, Slider/Switch Drag, QS Tile)
+
+# Cold Startup & Activity Entry
+HSPLcom/whitepoint/reducer/MainActivity;-><init>()V
+HSPLcom/whitepoint/reducer/MainActivity;->onCreate(Landroid/os/Bundle;)V
+HSPLcom/whitepoint/reducer/MainActivity;->onStart()V
+HSPLcom/whitepoint/reducer/MainActivity;->refreshLocalState()V
+
+# Dimming Engine & Hardware Control Hot Paths
+HSPLcom/whitepoint/reducer/WhitePoint;->hasPermission(Landroid/content/Context;)Z
+HSPLcom/whitepoint/reducer/WhitePoint;->isEnabled(Landroid/content/Context;)Z
+HSPLcom/whitepoint/reducer/WhitePoint;->getLevel(Landroid/content/Context;)I
+HSPLcom/whitepoint/reducer/WhitePoint;->setEnabled(Landroid/content/Context;Z)Z
+HSPLcom/whitepoint/reducer/WhitePoint;->setLevel(Landroid/content/Context;I)Z
+HSPLcom/whitepoint/reducer/DimmingEngine;->syncFromSystem(Landroid/content/Context;)V
+HSPLcom/whitepoint/reducer/DimmingEngine;->setEnabled(Landroid/content/Context;ZZLkotlin/jvm/functions/Function1;)Z
+HSPLcom/whitepoint/reducer/DimmingEngine;->setLevelImmediate(Landroid/content/Context;IZ)Z
+HSPLcom/whitepoint/reducer/DimmingEngine;->animateToLevel(Landroid/content/Context;IZZLkotlin/jvm/functions/Function1;)Z
+HSPLcom/whitepoint/reducer/DimmingPreferences;->getTargetLevel(Landroid/content/Context;)I
+HSPLcom/whitepoint/reducer/DimmingPreferences;->getPresets(Landroid/content/Context;)Ljava/util/List;
+HSPLcom/whitepoint/reducer/DimmingPreferences;->getScheduleConfig(Landroid/content/Context;)Lcom/whitepoint/reducer/ScheduleConfig;
+
+# Quick Settings Tile
+HSPLcom/whitepoint/reducer/WhitePointTileService;->onStartListening()V
+HSPLcom/whitepoint/reducer/WhitePointTileService;->onClick()V
+HSPLcom/whitepoint/reducer/WhitePointTileService;->refreshTile()V
+
+# Liquid Glass Compose UI & 120Hz Drag Physics
+Lcom/whitepoint/reducer/ui/ReduceWhitePointScreenKt;
+HSPLcom/whitepoint/reducer/ui/ReduceWhitePointScreenKt;->ReduceWhitePointScreen(**)V
+HSPLcom/whitepoint/reducer/ui/LiquidGlassComponentsKt;->AmbientRefractiveBackground(**)V
+HSPLcom/whitepoint/reducer/ui/LiquidGlassComponentsKt;->LiquidGlassCard(**)V
+HSPLcom/whitepoint/reducer/ui/LiquidGlassComponentsKt;->LiquidGlassPill(**)V
+HSPLcom/whitepoint/reducer/ui/LiquidGlassComponentsKt;->LiquidGlassSwitch(**)V
+HSPLcom/whitepoint/reducer/ui/LiquidGlassComponentsKt;->LiquidGlassIntensitySlider(**)V
+HSPLcom/whitepoint/reducer/ui/DampedDragState;->snapValue(FF)V
+HSPLcom/whitepoint/reducer/ui/DampedDragState;->animateSettle(F)V
+Lcom/whitepoint/reducer/ui/LucideIcons;
+
+# Kyant0 Backdrop & G2 Shapes Hot Paths
+Lcom/kyant/backdrop/**
+Lcom/kyant/shapes/**

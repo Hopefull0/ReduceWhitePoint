@@ -1,0 +1,29 @@
+# Gradle & build outputs
+.gradle/
+build/
+*/build/
+app/build/
+.kotlin/
+
+# Local configuration & SDK paths
+local.properties
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Keystores & secrets
+*.jks
+*.keystore
+*.p12
+*.pem
+*.env
+keystore.properties
+
+# Logs, dumps & OS files
+*.log
+*.hprof
+captures/
+.DS_Store
+Thumbs.db

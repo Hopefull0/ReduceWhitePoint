@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Granted once via ADB -->
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+
+    <!-- Schedule persistence across device reboots -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!-- Optional exact alarm scheduling (falls back gracefully to setAndAllowWhileIdle) -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <!-- Optional coarse location for Sunset-to-Sunrise (falls back gracefully to timezone solar estimate) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ReduceWhitePoint">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Long-press the Quick Settings tile to open the app -->
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <activity
+            android:name=".ShortcutActionActivity"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:taskAffinity=""
+            android:theme="@style/Theme.ReduceWhitePoint.ShortcutTrampoline">
+            <intent-filter>
+                <action android:name="com.whitepoint.reducer.SHORTCUT_ACTION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".WhitePointTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_sun_ios_large"
+            android:label="@string/tile_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="true" />
+        </service>
+
+        <receiver
+            android:name=".ScheduleReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="com.whitepoint.reducer.ACTION_SCHEDULE_TICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Exported automation receiver for Tasker, MacroDroid, and ADB -->
+        <receiver
+            android:name=".WhitePointAutomationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.whitepoint.reducer.ACTION_CONTROL" />
+                <action android:name="com.whitepoint.reducer.ACTION_TOGGLE" />
+                <action android:name="com.whitepoint.reducer.ACTION_ENABLE" />
+                <action android:name="com.whitepoint.reducer.ACTION_DISABLE" />
+                <action android:name="com.whitepoint.reducer.ACTION_SET_INTENSITY" />
+                <action android:name="com.whitepoint.reducer.ACTION_APPLY_PRESET" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".WhitePointWidgetReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/white_point_widget_info" />
+        </receiver>
+
+    </application>
+</manifest>

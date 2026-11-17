@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="toggle_dimmer"
+        android:enabled="true"
+        android:icon="@drawable/ic_sun_ios_large"
+        android:shortcutShortLabel="@string/shortcut_toggle_short"
+        android:shortcutLongLabel="@string/shortcut_toggle_long">
+        <intent
+            android:action="com.whitepoint.reducer.SHORTCUT_ACTION"
+            android:targetPackage="com.whitepoint.reducer"
+            android:targetClass="com.whitepoint.reducer.ShortcutActionActivity">
+            <extra android:name="command" android:value="toggle" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="preset_reading"
+        android:enabled="true"
+        android:icon="@drawable/ic_sun_ios_large"
+        android:shortcutShortLabel="@string/shortcut_reading_short"
+        android:shortcutLongLabel="@string/shortcut_reading_long">
+        <intent
+            android:action="com.whitepoint.reducer.SHORTCUT_ACTION"
+            android:targetPackage="com.whitepoint.reducer"
+            android:targetClass="com.whitepoint.reducer.ShortcutActionActivity">
+            <extra android:name="command" android:value="apply_preset" />
+            <extra android:name="preset" android:value="Reading" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="preset_night"
+        android:enabled="true"
+        android:icon="@drawable/ic_sun_ios_large"
+        android:shortcutShortLabel="@string/shortcut_night_short"
+        android:shortcutLongLabel="@string/shortcut_night_long">
+        <intent
+            android:action="com.whitepoint.reducer.SHORTCUT_ACTION"
+            android:targetPackage="com.whitepoint.reducer"
+            android:targetClass="com.whitepoint.reducer.ShortcutActionActivity">
+            <extra android:name="command" android:value="apply_preset" />
+            <extra android:name="preset" android:value="Night" />
+        </intent>
+    </shortcut>
+
+    <shortcut
+        android:shortcutId="preset_ultra_dim"
+        android:enabled="true"
+        android:icon="@drawable/ic_sun_ios_large"
+        android:shortcutShortLabel="@string/shortcut_ultra_short"
+        android:shortcutLongLabel="@string/shortcut_ultra_long">
+        <intent
+            android:action="com.whitepoint.reducer.SHORTCUT_ACTION"
+            android:targetPackage="com.whitepoint.reducer"
+            android:targetClass="com.whitepoint.reducer.ShortcutActionActivity">
+            <extra android:name="command" android:value="apply_preset" />
+            <extra android:name="preset" android:value="Ultra Dim" />
+        </intent>
+    </shortcut>
+</shortcuts>
