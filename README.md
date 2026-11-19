@@ -6,6 +6,7 @@
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.3.10-7F52FF?logo=kotlin&logoColor=white)
 ![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203%20%2B%20Glance-4285F4?logo=jetpackcompose&logoColor=white)
 ![License](https://img.shields.io/badge/License-Apache--2.0-blue)
+[![Latest Release](https://img.shields.io/github/v/release/Hopefull0/ReduceWhitePoint?label=Download%20APK&color=0A84FF)](https://github.com/Hopefull0/ReduceWhitePoint/releases/latest)
 
 > **Disclaimer:** Built and tested specifically on **ColorOS 17**. Compatibility on other Android skins (Pixel/AOSP, One UI, HyperOS, etc.) is unverified—some OEMs may expose or restrict `Settings.Secure` (`reduce_bright_colors_*`) differently.
 

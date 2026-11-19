@@ -16,10 +16,24 @@ android {
         versionName = "2.0"
     }
 
+    signingConfigs {
+        val storePath = System.getenv("SIGNING_STORE_FILE")
+        if (!storePath.isNullOrBlank() && file(storePath).exists()) {
+            create("release") {
+                storeFile = file(storePath)
+                storePassword = System.getenv("SIGNING_STORE_PASSWORD")
+                keyAlias = System.getenv("SIGNING_KEY_ALIAS")
+                keyPassword = System.getenv("SIGNING_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            signingConfig = signingConfigs.findByName("release")
+                ?: signingConfigs.getByName("debug")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
